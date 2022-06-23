@@ -5,7 +5,7 @@ int main(int argc, char* argv[]) {
   registerGen(argc,argv,1);
   
   int RANGE = atoi(argv[1]);
-  int a = rnd.next(RANGE);
+  int a = rnd.next(1,RANGE);
   int b = rnd.next(a,RANGE);
   printf("%d %d\n",a,b);
  

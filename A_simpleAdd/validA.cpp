@@ -6,7 +6,7 @@ int main(int argc, char* argv[]) {
  
     int a = inf.readInt(1,2000000000,"a");
     inf.readSpace();
-    int b = inf.readInt(a,2000000000,"b");
+    int b = inf.readInt(1,2000000000,"b");
     ensuref(a <= b,"b must be larger or equal than a");
     inf.readEoln();
     
