@@ -3,10 +3,6 @@ using namespace std;
  
 int a,b,c;
 
-int getGCD(int a,int b){
-  return (b==0) ? a : getGCD(b,a%b);
-}
-
 int main(int argc, char* argv[]) {
     registerTestlibCmd(argc, argv);
     
@@ -19,9 +15,10 @@ int main(int argc, char* argv[]) {
     if(a * x + b * y == c){
       quitf(_ok,"ok");
     } else if(x == -1 && y == -1){
-      int GCD = getGCD(a,b);
-      if(c % GCD == 0){
-        quitf(_wa,"wrong : answer exist, but participant can't find");
+      int ans_x = ans.readInt();
+      int ans_y = ans.readInt();
+      if(ans_x != -1 && ans_y != -1){
+        quitf(_wa,"answer exist, but participant can't find");
       } else{
         quitf(_ok,"answer doesn't exist");
       }
